@@ -1,0 +1,1 @@
+export const CHEN_EVENT = 'chen';
