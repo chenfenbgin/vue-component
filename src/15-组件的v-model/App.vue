@@ -1,0 +1,36 @@
+<template>
+  <div id="app">
+    <!-- <input v-model="message" /> -->
+    <!-- <input :value="message" @input="message = $event.target.value" /> -->
+
+    <!-- 在组件上使用v-model， 如果只写 v-model,相当于下面绑定了一个属性和一个事件 -->
+    <!-- <bairen-input2 v-model="message"></bairen-input2> -->
+
+    <!-- 绑定两个v-model -->
+    <bairen-input2 v-model="message" v-model:title="title"></bairen-input2>
+    <h2>{{ message }}</h2>
+    <h2>{{ title }}</h2>
+
+    <!-- 等价于上面的写法👆, 我们需要在BairenInput定义这么一个属性 -->
+    <!-- <bairen-input :modelValue="message" @update:model-value="message = $eventg"></bairen-input> -->
+  </div>
+</template>
+
+<script type="text/javascript">
+import BairenInput2 from "./BairenInput2.vue";
+export default {
+  name: "app",
+  data() {
+    return {
+      message: "hello world",
+      title: "hhhhhh",
+    };
+  },
+  components: {
+    BairenInput2,
+  },
+};
+</script>
+
+<style scoped>
+</style>
