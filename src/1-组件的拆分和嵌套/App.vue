@@ -3,13 +3,13 @@
     <!-- header写成大小，为了防止和H5中的标签重复 -->
     <Header></Header>
     <Main></Main>
-     <Footer></Footer>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 // import Header from "./Header";
-//可以不跟后缀名，vue cli 基于-> webpack -> extensions;
+//可以不跟后缀名，vue cli 基于-> webpack -> extensions，会配置后缀名;
 import Header from "./Header.vue";
 import Footer from "./Footer";
 import Main from "./Main";
@@ -27,3 +27,20 @@ export default {
 </script>
 
 <style scoped></style>
+
+<!-- vbase快捷键 -->
+<!-- <template>
+  <div>
+
+  </div>
+</template>
+
+<script>
+  export default {
+    
+  }
+</script>
+
+<style lang="scss" scoped>
+
+</style> -->

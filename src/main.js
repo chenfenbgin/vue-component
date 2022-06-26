@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './15-组件的v-model/App.vue'
+import App from './5-商品页面的切换/App.vue'
 
 // import {sum} from './12_异步组件的使用/utils/math';
 

@@ -33,7 +33,7 @@ export default {
   methods: {
     itemClick(index) {
       this.currentIndex = index;
-      this.$emit("titleClick", index)
+      this.$emit("titleClick", index);
     },
   },
 };
@@ -45,6 +45,7 @@ export default {
 }
 
 .tab-control-item {
+  /* 3个占比都是1份 */
   flex: 1;
   text-align: center;
 }

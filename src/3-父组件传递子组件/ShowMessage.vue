@@ -1,6 +1,15 @@
 <template>
+  <!-- 父组件传递过来的非props属性 -->
+  <!-- <div class="chen"> -->
   <div>
-    <h2>{{ title }}</h2>
+    <!-- 父组件传递过来的title 和 content -->
+    <!-- <h2>{{ title }}</h2> -->
+
+    <!-- 从非props取出class只给h2标签 -->
+    <!-- <h2 :class="$attrs.class">{{ title }}</h2> -->
+
+    <!-- 如果这里也有id，class属性的话，可以直接使用v-bind  -->
+    <h2 :="$attrs">{{ title }}</h2>
     <p>{{ content }}</p>
   </div>
 </template>
@@ -8,7 +17,7 @@
 <script type="text/javascript">
 export default {
   name: "ShowMessage",
-  inheritAttrs: false,  //不希望组件的根元素继承attribute
+  inheritAttrs: false, //不希望组件的根元素继承attribute
   /**
    * 父组件之间通信
    *    Props: 是你可以在组件上注册一些自定义的 attribute
@@ -18,9 +27,11 @@ export default {
    *    方式一： 字符串数组
    *    方式二： 对象数组
    */
-  // 方式一： 数组
+
+  // 父传子方式一： 数组
   // props: ["title", "content"],
-  // 方式二： 对象
+
+  // 父传子方式二： 对象
   props: {
     title: String,
     content: {
@@ -62,5 +73,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
