@@ -6,12 +6,14 @@
       <!-- <button>左边的按钮</button> -->
 
       <!-- 分配给左边的插槽 -->
-      <template v-slot:left>
+      <!-- 这里的v-slot：left, 可以直接写成 # -->
+      <!-- <template v-slot:left> -->
+      <template #left>
         <button>左边的按钮</button>
       </template>
 
       <!-- 中间的插槽 -->
-      <template v-slot:center>
+      <template #center>
         <h2>我是标题</h2>
       </template>
 
@@ -21,6 +23,8 @@
       </template>
 
       <!-- 动态具名插槽 -->
+      <!-- 如果直接写v-slot:name, 这里的name是不会去取data中的name值的 -->
+      <!-- <template v-slot:[name]> -->
       <template v-slot:[name]>
         <i>chen内容</i>
       </template>

@@ -8,7 +8,7 @@
     <!-- 2.通过input事件触发 -->
     <!-- <input :value="modelValue" @input="btnClick" /> -->
 
-    <!-- 3.通过input事件触发 -->
+    <!-- 3.通过input事件触发,直接绑定到props这种方式是不对的 -->
     <!-- <input v-model="modelValue" /> -->
 
     <!-- 4.通过计算属性来实现 -->

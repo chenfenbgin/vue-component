@@ -13,10 +13,12 @@
       <!-- showNames中的item, 有作用域，这样是娶不到的，需要tempalte -->
       <!-- <button>{{item}}</button> -->
 
-      <!-- 可以取到子组件中的 item index, 相当于传回去 -->
+      <!-- 可以取到子组件中的 item index, 相当于传回去;
+          slotProps就是自组件赋值的属性， slotProps是可以随便取名字的。
+      -->
       <template v-slot="slotProps">
         <button>{{ slotProps.item }} - {{ slotProps.index }}</button>
-        
+
         <!-- 这里可以该成自己想要的了 -->
         <!-- <h2>{{ slotProps.item }} - {{ slotProps.index }}</h2> -->
         <!-- <strong>{{ slotProps.item }} - {{ slotProps.index }}</strong> -->
@@ -33,6 +35,7 @@ export default {
   name: "app",
   data() {
     return {
+      // 需求，希望将names交给组件来展示。
       names: ["chen", "liu", "shen"],
     };
   },
@@ -43,5 +46,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

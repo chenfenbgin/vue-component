@@ -1,5 +1,5 @@
 <template>
-  <div>HomeContent： {{ name }}-{{ age }} - {{ length }}</div>
+  <div>HomeContent： {{ name }}-{{ age }} - {{ length.value }}</div>
 </template>
 
 <script type="text/javascript">
@@ -15,5 +15,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

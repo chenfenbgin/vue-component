@@ -11,31 +11,29 @@
 </template>
 
 <script>
-  import NavBar from './NavBar.vue';
+import NavBar from "./NavBar.vue";
 
-  export default {
-    components: {
-      NavBar
+export default {
+  components: {
+    NavBar,
+  },
+  data() {
+    return {
+      names: ["abc", "cba"],
+    };
+  },
+  methods: {
+    btnClick() {
+      console.log(this.$refs.title);
+
+      console.log(this.$refs.navBar.message);
+      this.$refs.navBar.sayHello();
+
+      // $el
+      console.log(this.$refs.navBar.$el);
     },
-    data() {
-      return {
-        names: ["abc", "cba"]
-      }
-    },
-    methods: {
-      btnClick() {
-        console.log(this.$refs.title);
-
-        console.log(this.$refs.navBar.message);
-        this.$refs.navBar.sayHello();
-
-        // $el
-        console.log(this.$refs.navBar.$el);
-      }
-    }
-  }
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

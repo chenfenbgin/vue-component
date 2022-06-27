@@ -18,9 +18,10 @@
     <!-- 方式二：动态组件来实现： 是使用component组件， 通过一个特殊的attribute is 来实现 -->
 
     <!-- keep-alive 保存按钮点击后的值，缓存起来了；可以结合路由对页面进行缓存 -->
-    <!-- include 表示只有匹配了的那个组件才需要缓存 -->
+    <!-- include 表示只有匹配了的那个组件才需要缓存，中间最好不要加空格Home, About() -->
     <!-- 如果默认全部缓存，不需要加name属性，如果指定的，需要加name属性 -->
     <keep-alive include="Home, About">
+      <!-- component也是可以传递事件的 -->
       <component :is="currentTab"> </component>
     </keep-alive>
 

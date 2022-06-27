@@ -1,3 +1,4 @@
+// mitt库的使用
 import mitt from "mitt";
 
 const emitter = mitt();

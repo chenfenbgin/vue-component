@@ -14,6 +14,7 @@ export default {
   },
   components: {},
   methods: {
+    // about组件中发生一个事件，HomeContent组件中进行监听
     btnClick() {
       console.log("about按钮的点击");
       emitter.emit("chen", { name: "chen", age: 123 });
@@ -22,5 +23,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

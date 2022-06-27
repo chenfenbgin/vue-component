@@ -6,24 +6,22 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        message: "我是NavBar中的message"
-      }
+export default {
+  data() {
+    return {
+      message: "我是NavBar中的message",
+    };
+  },
+  methods: {
+    sayHello() {
+      console.log("Hello NavBar");
     },
-    methods: {
-      sayHello() {
-        console.log("Hello NavBar");
-      },
-      getParentAndRoot() {
-        console.log(this.$parent);
-        console.log(this.$root);
-      }
-    }
-  }
+    getParentAndRoot() {
+      console.log(this.$parent);
+      console.log(this.$root);
+    },
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

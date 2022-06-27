@@ -8,6 +8,8 @@
 <script type="text/javascript">
 import Home from "./Home.vue";
 import { computed } from "vue";
+// 对于有模块化的组件来说，这里的this是undefined
+// console.log(this); // undefined
 
 export default {
   name: "App",
@@ -20,13 +22,18 @@ export default {
   //   name: 'chen',
   //   age: 23,
   // },
+
+  // 我们把provide改成函数写法，这里this，在源码中会被绑定到组件实例上
   provide() {
+    console.log(this); //组件实例
     return {
       name: "chen",
       age: 23,
       // 如果有引用data里面的数据，需要将provide写成函数形式返回
       // length: this.names.length,
-      length: computed(() => this.names.length), //改为响应式
+
+      // 这里this，箭头函数时不绑定的。computed返回的是一个ref对象，需要使用.value
+      length: computed(() => this.names.length), //改为响应式(如果names改变了，就可以这么使用)
     };
   },
   data() {
@@ -46,5 +53,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

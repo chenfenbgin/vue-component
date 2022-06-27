@@ -39,6 +39,7 @@ export default {
     console.log("home卸载完");
   },
   beforeUpdate() {
+    // DOM更新前后拿到的数据都是不一样的
     console.log("message", this.$refs.msg.innerHTML);
     console.log("home组件DOM更新之前调用");
   },
@@ -49,5 +50,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

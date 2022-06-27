@@ -10,6 +10,7 @@
       <slot name="right"></slot>
     </div>
         <div class="addtition">
+      <!-- <slot v-bind:name="name"></slot> -->
       <slot :name="name"></slot>
     </div>
   </div>
